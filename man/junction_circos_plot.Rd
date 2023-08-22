@@ -2,7 +2,8 @@
 % Please edit documentation in R/junction_circos_plot.r
 \name{junction_circos_plot}
 \alias{junction_circos_plot}
-\title{Make circos plot for block junctions}
+\title{Make circos plot for block junctions
+This function generates a circos plot to visualize block junctions and their relationships within a complex event.}
 \usage{
 junction_circos_plot(one_complex_ta_cov, link_cut_off = 4, ...)
 }
@@ -17,5 +18,6 @@ junction_circos_plot(one_complex_ta_cov, link_cut_off = 4, ...)
 A circos plot visualizing block junctions and their relationships.
 }
 \description{
+Make circos plot for block junctions
 This function generates a circos plot to visualize block junctions and their relationships within a complex event.
 }

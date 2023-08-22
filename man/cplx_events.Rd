@@ -2,7 +2,8 @@
 % Please edit documentation in R/cplx_events.r
 \name{cplx_events}
 \alias{cplx_events}
-\title{Extract intricate blocks corresponding to each complex event}
+\title{Extract intricate blocks corresponding to each complex event
+This function takes a dataframe of genomic blocks and extracts intricate blocks corresponding to each complex event. It identifies complex events by iteratively collecting interacting blocks and contigs. Both redundant and non-redundant complex structural variations (SVs) are identified and returned.}
 \usage{
 cplx_events(df, threshold)
 }
@@ -15,6 +16,7 @@ cplx_events(df, threshold)
 A list containing both redundant and non-redundant complex SVs, where each SV is represented by a list containing "blocks" (sorted blocks) and "contigs" (sorted contigs).
 }
 \description{
+Extract intricate blocks corresponding to each complex event
 This function takes a dataframe of genomic blocks and extracts intricate blocks corresponding to each complex event. It identifies complex events by iteratively collecting interacting blocks and contigs. Both redundant and non-redundant complex structural variations (SVs) are identified and returned.
 }
 \examples{
@@ -23,5 +25,4 @@ data <- data.frame(
   interactions = c("B,C", "A", "A,B")
 )
 cplx_events(data, threshold = 2)
-
 }

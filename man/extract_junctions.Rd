@@ -2,7 +2,8 @@
 % Please edit documentation in R/extract_junctions.r
 \name{extract_junctions}
 \alias{extract_junctions}
-\title{Extract contig junctions}
+\title{Extract contig junctions
+This function takes a complex event dataframe and extracts contig junctions based on specified window size and gap threshold. It identifies contig junctions within each complex event, considering strand information and block rankings.}
 \usage{
 extract_junctions(one_complex_event, window_size = 10000, ...)
 }
@@ -17,5 +18,6 @@ extract_junctions(one_complex_event, window_size = 10000, ...)
 A dataframe containing extracted contig junctions with combined blocks and gaps.
 }
 \description{
+Extract contig junctions
 This function takes a complex event dataframe and extracts contig junctions based on specified window size and gap threshold. It identifies contig junctions within each complex event, considering strand information and block rankings.
 }

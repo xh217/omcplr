@@ -2,7 +2,8 @@
 % Please edit documentation in R/overlap_bin_mapID.r
 \name{overlap_bin_mapID}
 \alias{overlap_bin_mapID}
-\title{Bin the mapping mapID contig with a resolution of 10kb}
+\title{Bin the mapping mapID contig with a resolution of 10kb
+This function takes genomic bin and xmap data and performs binning with a specified window size.}
 \usage{
 overlap_bin_mapID(genome_bin, xmap, window_size = 10000, ...)
 }
@@ -14,5 +15,6 @@ overlap_bin_mapID(genome_bin, xmap, window_size = 10000, ...)
 \item{window_size}{The size of the binning window in base pairs.}
 }
 \description{
+Bin the mapping mapID contig with a resolution of 10kb
 This function takes genomic bin and xmap data and performs binning with a specified window size.
 }

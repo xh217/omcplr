@@ -2,7 +2,9 @@
 % Please edit documentation in R/order.of.events.r
 \name{order.of.events}
 \alias{order.of.events}
-\title{Leveraging bnlearn for inferring the order of complex events}
+\title{Leveraging bnlearn for inferring the order of complex events
+This function uses the bnlearn package to infer the order of complex events based on provided data.
+It constructs a Bayesian network using the given complex events, breakpoints, and coverage data to determine their relationships.}
 \usage{
 order.of.events(
   cplx_list,
@@ -24,6 +26,7 @@ order.of.events(
 \item{optimization}{The type of optimization to perform ("hc" for hill climbing, "pc.stable" for PC-stable algorithm).}
 }
 \description{
+Leveraging bnlearn for inferring the order of complex events
 This function uses the bnlearn package to infer the order of complex events based on provided data.
 It constructs a Bayesian network using the given complex events, breakpoints, and coverage data to determine their relationships.
 }

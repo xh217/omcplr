@@ -2,7 +2,8 @@
 % Please edit documentation in R/merge_range.r
 \name{within_5kb}
 \alias{within_5kb}
-\title{Merge overlapping ranges within a group}
+\title{Merge overlapping ranges within a group
+This function takes a data frame with ranges and merges overlapping ranges within the same group based on specified criteria.}
 \usage{
 within_5kb(range1, range2)
 }
@@ -19,5 +20,6 @@ within_5kb(range1, range2)
 TRUE if the two ranges are within 5kb of each other, FALSE otherwise.
 }
 \description{
+Merge overlapping ranges within a group
 This function takes a data frame with ranges and merges overlapping ranges within the same group based on specified criteria.
 }

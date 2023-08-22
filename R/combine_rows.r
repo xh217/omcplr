@@ -1,7 +1,5 @@
 #' Function to combine rows based on shared elements
-#'
 #' This function takes a data frame and combines rows that have shared elements. It iterates through each row and checks for shared elements with subsequent rows. If shared elements are found, the rows are combined.
-#'
 #' @param data A data frame where rows need to be combined.
 #' @param sep The separator used to split and combine elements (default is ";").
 #' @return A list of combined rows.

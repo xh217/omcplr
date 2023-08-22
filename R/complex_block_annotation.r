@@ -1,7 +1,5 @@
 #' Annotate complex event blocks
-#'
 #' This function annotates complex event blocks by identifying genes that overlap with the specified genomic regions. It utilizes the GenomicRanges package to perform overlap detection and retrieves gene symbols for the overlapping genes.
-#'
 #' @param block A data frame or tibble containing complex event blocks. Each row should represent a block with "chr" (chromosome) and "start" (start position) columns.
 #' @param window_size The window size used for creating genomic regions around blocks (default is 10000).
 #' @param USCS_gene The name of the UCSC transcript database object (default is "TxDb.Hsapiens.UCSC.hg38.knownGene").
@@ -10,7 +8,6 @@
 #' @importFrom GenomicRanges makeGRangesFromDataFrame
 #' @importFrom GenomicRanges findOverlaps
 #' @importFrom GenomicFeatures genes
-#' @importFrom org.Hs.eg.db select
 #' @importFrom AnnotationDbi select
 #' @importFrom base gsub
 #' @importFrom base as.numeric

@@ -1,15 +1,13 @@
 #' Extract contig junctions
-#'
 #' This function takes a complex event dataframe and extracts contig junctions based on specified window size and gap threshold. It identifies contig junctions within each complex event, considering strand information and block rankings.
-#'
 #' @param one_complex_event A dataframe representing a single complex event with relevant columns including "mapID", "chr", "start_q", "end_q", "start_r", "end_r", and "strand".
 #' @param window_size The window size used for creating genomic regions around contig junctions (default is 10000).
 #' @param ... Additional arguments (currently not used).
 #' @return A dataframe containing extracted contig junctions with combined blocks and gaps.
 #' @importFrom GenomicRanges makeGRangesFromDataFrame findOverlaps width
-#' @importFrom dplyr arrange filter subset mutate as.data.frame
+#' @importFrom dplyr arrange filter mutate
 #' @importFrom tidyr unnest
-#' @importFrom stringr str_extract_all strsplit
+#' @importFrom stringr str_extract_all
 #' @importFrom gtools mixedsort
 #' @export
 

@@ -2,7 +2,8 @@
 % Please edit documentation in R/coor_dataframe.r
 \name{coor_dataframe}
 \alias{coor_dataframe}
-\title{Convert junction bin to a dataframe including the first and second junction positions}
+\title{Convert junction bin to a dataframe including the first and second junction positions
+This function takes a character vector of junction coordinates and converts it into a dataframe. For each junction, it calculates the positions of the first and second junction blocks based on a specified window size.}
 \usage{
 coor_dataframe(coordinates, window = 10000)
 }
@@ -15,10 +16,10 @@ coor_dataframe(coordinates, window = 10000)
 A list of dataframes, where each dataframe contains information about the first and second junction positions.
 }
 \description{
+Convert junction bin to a dataframe including the first and second junction positions
 This function takes a character vector of junction coordinates and converts it into a dataframe. For each junction, it calculates the positions of the first and second junction blocks based on a specified window size.
 }
 \examples{
 coords <- c("chr1:1000-chr2:2000", "chr3:3000-chr4:4000")
 coor_dataframe(coords, window = 5000)
-
 }

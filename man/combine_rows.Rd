@@ -2,7 +2,8 @@
 % Please edit documentation in R/combine_rows.r
 \name{combine_rows}
 \alias{combine_rows}
-\title{Function to combine rows based on shared elements}
+\title{Function to combine rows based on shared elements
+This function takes a data frame and combines rows that have shared elements. It iterates through each row and checks for shared elements with subsequent rows. If shared elements are found, the rows are combined.}
 \usage{
 combine_rows(data, sep = ";")
 }
@@ -15,6 +16,7 @@ combine_rows(data, sep = ";")
 A list of combined rows.
 }
 \description{
+Function to combine rows based on shared elements
 This function takes a data frame and combines rows that have shared elements. It iterates through each row and checks for shared elements with subsequent rows. If shared elements are found, the rows are combined.
 }
 \examples{

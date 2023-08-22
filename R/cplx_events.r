@@ -1,7 +1,5 @@
 #' Extract intricate blocks corresponding to each complex event
-#'
 #' This function takes a dataframe of genomic blocks and extracts intricate blocks corresponding to each complex event. It identifies complex events by iteratively collecting interacting blocks and contigs. Both redundant and non-redundant complex structural variations (SVs) are identified and returned.
-#'
 #' @param df A dataframe containing genomic blocks and their interactions.
 #' @param threshold The minimum threshold for the number of interactions required to initiate a complex event.
 #' @return A list containing both redundant and non-redundant complex SVs, where each SV is represented by a list containing "blocks" (sorted blocks) and "contigs" (sorted contigs).
@@ -11,8 +9,7 @@
 #'   interactions = c("B,C", "A", "A,B")
 #' )
 #' cplx_events(data, threshold = 2)
-#'
-#' @importFrom stringr strsplit
+#' @importFrom base strsplit
 #' @importFrom base nrow
 #' @importFrom base unique
 #' @importFrom base as.matrix

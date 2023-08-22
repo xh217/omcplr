@@ -1,7 +1,5 @@
 #' Merge overlapping ranges within a group
-#'
 #' This function takes a data frame with ranges and merges overlapping ranges within the same group based on specified criteria.
-#'
 #' @param range1 Numeric value representing the start or end of the first range.
 #' @param range2 Numeric value representing the start or end of the second range.
 #' @return TRUE if the two ranges are within 5kb of each other, FALSE otherwise.

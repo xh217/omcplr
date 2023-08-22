@@ -1,16 +1,13 @@
 #' Leveraging bnlearn for inferring the order of complex events
-#'
 #' This function uses the bnlearn package to infer the order of complex events based on provided data.
 #' It constructs a Bayesian network using the given complex events, breakpoints, and coverage data to determine their relationships.
-#'
 #' @param cplx_list A list containing information about complex events, including blocks and contigs.
 #' @param bpdf A data frame containing breakpoint information, with columns for contig names, start positions, and end positions.
 #' @param covdf A data frame containing coverage information for the contigs.
 #' @param cplx.event The index of the complex event to be analyzed.
 #' @param optimization The type of optimization to perform ("hc" for hill climbing, "pc.stable" for PC-stable algorithm).
-#' @importFrom bnlearn bnlearn
 #' @importFrom reshape2 dcast
-#' @importFrom dplyr mutate subset
+#' @importFrom dplyr mutate
 #' @export
 order.of.events <- function(cplx_list, bpdf, covdf, cplx.event = 1,optimization = "pc.stable") {
     library(bnlearn)

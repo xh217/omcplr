@@ -2,7 +2,8 @@
 % Please edit documentation in R/complex_block_annotation.r
 \name{complex_block_annotation}
 \alias{complex_block_annotation}
-\title{Annotate complex event blocks}
+\title{Annotate complex event blocks
+This function annotates complex event blocks by identifying genes that overlap with the specified genomic regions. It utilizes the GenomicRanges package to perform overlap detection and retrieves gene symbols for the overlapping genes.}
 \usage{
 complex_block_annotation(
   block,
@@ -21,5 +22,6 @@ complex_block_annotation(
 A character vector containing unique gene symbols associated with overlapping blocks.
 }
 \description{
+Annotate complex event blocks
 This function annotates complex event blocks by identifying genes that overlap with the specified genomic regions. It utilizes the GenomicRanges package to perform overlap detection and retrieves gene symbols for the overlapping genes.
 }

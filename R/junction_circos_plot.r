@@ -1,15 +1,13 @@
 #' Make circos plot for block junctions
-#'
 #' This function generates a circos plot to visualize block junctions and their relationships within a complex event.
-#'
 #' @param one_complex_ta_cov A dataframe containing coverage information for block junctions within a complex event.
 #' @param link_cut_off The cutoff value for links to be displayed in the circos plot (default is 4).
 #' @param ... Additional arguments (currently not used).
 #' @return A circos plot visualizing block junctions and their relationships.
 #' @importFrom reshape2 dcast
-#' @importFrom pals pals
 #' @importFrom circlize circos.clear chordDiagram circos.text circos.trackPlotRegion
-#' @importFrom RColorBrewer brewer.pal findInterval
+#' @importFrom RColorBrewer brewer.pal 
+#' @importFrom base findInterval
 #' @export
 
 junction_circos_plot <- function(one_complex_ta_cov,link_cut_off = 4, ...) {
