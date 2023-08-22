@@ -2,7 +2,7 @@
 % Please edit documentation in R/merge_range.r
 \name{within_5kb}
 \alias{within_5kb}
-\title{Function to check if two ranges are within 5kb of each other}
+\title{Merge overlapping ranges within a group}
 \usage{
 within_5kb(range1, range2)
 }
@@ -10,10 +10,14 @@ within_5kb(range1, range2)
 \item{range1}{Numeric value representing the start or end of the first range.}
 
 \item{range2}{Numeric value representing the start or end of the second range.}
+
+\item{data}{A data frame containing ranges and associated data.}
+
+\item{within_5kb}{A function that checks if two ranges are within 5kb of each other.}
 }
 \value{
 TRUE if the two ranges are within 5kb of each other, FALSE otherwise.
 }
 \description{
-This function checks if two ranges are within a specified distance of each other (5kb by default).
+This function takes a data frame with ranges and merges overlapping ranges within the same group based on specified criteria.
 }
