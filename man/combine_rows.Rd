@@ -22,5 +22,4 @@ This function takes a data frame and combines rows that have shared elements. It
 \examples{
 data <- data.frame(V1 = c("A;B", "C;D", "B;E", "F"), stringsAsFactors = FALSE)
 combined <- combine_rows(data, sep = ";")
-
 }

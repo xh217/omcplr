@@ -6,7 +6,6 @@
 #' @examples
 #' data <- data.frame(V1 = c("A;B", "C;D", "B;E", "F"), stringsAsFactors = FALSE)
 #' combined <- combine_rows(data, sep = ";")
-#'
 #' @importFrom base nrow
 #' @importFrom base paste
 #' @importFrom base unique

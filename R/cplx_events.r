@@ -13,7 +13,7 @@
 #' @importFrom base nrow
 #' @importFrom base unique
 #' @importFrom base as.matrix
-#' @importFrom base stack
+#' @importFrom utils stack
 #' @export
 cplx_events <-function(df,threshold) {
   library(stringr)
