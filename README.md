@@ -18,7 +18,8 @@ devtools::install_github("sjdlabgroup/omcplr",build_vignettes = FALSE )
 
 Step 1. Aligned each mapID contig with the reference genome and binned the mapping mapID contig with a resolution of 10kb 
 
-Step 2. Retrieve all mapID contigs that mapping to the same seed bin and clustered mapID contigs and defined a complex haplotype as having at least four mapID contigs to the same reference chromosome position.
+Step 2. Retrieve all mapID contigs that mapping to the same seed bin and clustered mapID contigs and defined a complex haplotype as having 
+at least four mapID contigs to the same reference chromosome position.
 
 Step 3. Utilized the BNLearn algorithm to trace the origin and trajectory of the segment junctions.
 
@@ -28,10 +29,11 @@ Step 3. Utilized the BNLearn algorithm to trace the origin and trajectory of the
     
 Details
 
-Aligned each mapID contig with the reference genome and binned the mapping mapID contig with a resolution of 10kb, utilizing the same version of the reference
-genome as used in the bionano analysis. The reference genome was binned with a 10kb resolution. The output includes all the bins that are covered by each mapID,
-along with the corresponding mapIDs that have overlapping regions in the reference genome. The output consists of two columns: the first column displays the
-included reference bins, and the second column lists the mapIDs associated with those reference bins.
+Aligned each mapID contig with the reference genome and binned the mapping mapID contig with a resolution of 10kb, utilizing the same
+version of the reference genome as used in the bionano analysis. The reference genome was binned with a 10kb resolution. The output
+includes all the bins that are covered by each mapID, along with the corresponding mapIDs that have overlapping regions in the
+reference genome. The output consists of two columns: the first column displays the included reference bins, and the second
+column lists the mapIDs associated with those reference bins.
     
 Examples
  
@@ -50,13 +52,13 @@ head(combine_tmp)
 13 C1_5 26572,26622,17811
 16 C1_6 26572,26622,17811
  
-## Step 2. Retrieve all mapID contigs that mapping to the same seed bin and clustered mapID contigs and defined a complex haplotype as having at least four mapID
-contigs to the same reference chromosome position.
+## Step 2. Retrieve all mapID contigs that mapping to the same seed bin and clustered mapID contigs and defined a complex haplotype
+as having at least four mapID contigs to the same reference chromosome position.
     
 Details
  
-Retrieve all mapID contigs that mapping to the same seed bin and clustered mapID contigs and defined a complex haplotype as having at least four mapID contigs to
-the same reference chromosome position.
+Retrieve all mapID contigs that mapping to the same seed bin and clustered mapID contigs and defined a complex haplotype as having
+at least four mapID contigs to the same reference chromosome position.
 
 Examples
 
@@ -73,12 +75,14 @@ head(complex_event$contigs[[1]])
 
 Details
 
-Complex genomic regions are frequent occurrences that drive the development of cancer. However, identifying somatic complex genomic regions has proven to be a
-challenging task. By employing Optical mapping, structural variations (SVs) can be successfully detected on the same DNA fiber, indicating their tandem
-occurrence on a single/mutiple chromosomes. This enabled to pinpoint the segment junctions between these tandem SVs. During the investigation using BNG analysis,
-we observed the presence of multiple heterogeneous DNA contigs, referred to as complex regions (inferred by step 2), all aligning to the same location on the
-reference genome. We were able to extract all the segment junctions from these regions, and these junctions appeared to be closely associated with the initiation
-of large-scale rearrangement events across multiple chromosomes.
+Complex genomic regions are frequent occurrences that drive the development of cancer. However, identifying somatic complex
+genomic regions has proven to be a challenging task. By employing Optical mapping, structural variations (SVs) can be
+successfully detected on the same DNA fiber, indicating their tandem occurrence on a single/mutiple chromosomes.
+This enabled to pinpoint the segment junctions between these tandem SVs. During the investigation using BNG analysis,
+we observed the presence of multiple heterogeneous DNA contigs, referred to as complex regions (inferred by step 2),
+all aligning to the same location on the reference genome. We were able to extract all the segment junctions from
+these regions, and these junctions appeared to be closely associated with the initiation of large-scale rearrangement
+events across multiple chromosomes.
 
 i) extract segment junctions between tandem mapID
 
@@ -123,7 +127,8 @@ single_complex_cov<-unique(cov[which(cov$mapID %in% unique(single_complex_juncti
 
 single_complex_combine_tmp<-overlap_bin_mapID(genome_bin,single_complex_df, window_size=10000)
 one_complex_event<-cplx_events(single_complex_combine_tmp,4)
-res<-order.of.events(cplx_list=one_complex_event,bpdf=single_complex_junction,covdf=single_complex_cov,cplx.event=1, optimization="pc.stable")
+res<-order.of.events(cplx_list=one_complex_event,bpdf=single_complex_junction,covdf=single_complex_cov,
+cplx.event=1, optimization="pc.stable")
 
 #make trajectory plot
 traj_plot <- ooe.plot(res)
@@ -179,7 +184,8 @@ coor_dataframe(junction,window=10000)
 ### complex_block_annotation
 
 #### Description
-After finding the interesting complex regions, one can proceed to map them to known genes and annotate these bins with complex events
+After finding the interesting complex regions, one can proceed to map them to known genes and annotate these bins 
+with complex events
 ```
 library(tidyr)
 library(GenomicRanges)
@@ -220,8 +226,8 @@ combine_rows(df,sep=';')
 ### merge_range
 
 #### Description
-merged SVs that satisfy two criteria: (i) if both breakends of the SVs fall within a 5kb range, and (ii) the SVs share the same type, they are combined into a 
-single SV
+merged SVs that satisfy two criteria: (i) if both breakends of the SVs fall within a 5kb range, and (ii) the SVs 
+share the same type, they are combined into a single SV
 ```
 merge_range(data)
 ```
