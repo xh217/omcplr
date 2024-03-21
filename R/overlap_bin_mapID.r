@@ -11,6 +11,9 @@ overlap_bin_mapID <- function(genome_bin, xmap, window_size = 10000, ...) {
     library(data.table)
     
 # read input data    
+  if (exists("genome_bin", mode = "list")) {
+    genome_bin <- genome_bin
+  } else if (file.exists(xmap)) {
     genome_bin <-
       read.table(
         genome_bin,
@@ -18,6 +21,7 @@ overlap_bin_mapID <- function(genome_bin, xmap, window_size = 10000, ...) {
         header = F,
         stringsAsFactors = F
       )
+  }
     colnames(genome_bin) <- c("chr", "start", "end")
     
   # read input data   
