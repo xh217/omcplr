@@ -34,8 +34,8 @@ Examples
  
 library(GenomicRanges)
 library(data.table)
-genome_bin <- c("data/genome.10kb.bed")
-xmap <- c("data/xmap")
+genome_bin <- read.table("data/genome.10kb.bed",header=T)
+xmap <- read.table("data/xmap",header=T)
 combine_tmp <- overlap_bin_mapID(genome_bin,xmap,window_size=10000)
 
 head(combine_tmp)
