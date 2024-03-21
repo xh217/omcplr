@@ -25,7 +25,8 @@ Step 3. Utilized the BNLearn algorithm to trace the origin and trajectory of the
 
 ```
 
-## Step 1. Aligned each mapID contig with the reference genome and binned the mapping mapID contig with a resolution of 10kb 
+## Step 1. Aligned each mapID contig with the reference genome and binned the mapping mapID contig with a
+resolution of 10kb 
     
 Details
 
