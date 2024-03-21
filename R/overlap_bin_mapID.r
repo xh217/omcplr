@@ -13,7 +13,7 @@ overlap_bin_mapID <- function(genome_bin, xmap, window_size = 10000, ...) {
 # read input data    
   if (exists("genome_bin", mode = "list")) {
     genome_bin <- genome_bin
-  } else if (file.exists(xmap)) {
+  } else if (file.exists(genome_bin)) {
     genome_bin <-
       read.table(
         genome_bin,
